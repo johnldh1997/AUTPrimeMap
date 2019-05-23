@@ -38,6 +38,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private static final int REQUEST_CODE = 101;
     private GoogleMap mMap;
 
+    //Create a marker in setted location with latitude and longitude
     private static final LatLng AUTSouthCampus = new LatLng(-36.984360, 174.879210);
     private Marker SouthCampus;
 
@@ -68,7 +69,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         Task<Location> task = fusedLocationProviderClient.getLastLocation();
         task.addOnSuccessListener(new OnSuccessListener<Location>()
-
         {
             @Override
             public void onSuccess(Location location)
